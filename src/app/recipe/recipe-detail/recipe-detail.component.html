@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-xs-12">
+  <img src="" alt="" class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Recipe Name</h1>
+  </div>
+</div>
+
+<!--
+<div class="row" >
+ <div class="col-xs-12">
+    <div class="btn-group" >
+      <button class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
+      <div class="dropdown-menu">
+       <a href="#">To Shopping List</a>
+        <a href="#">Edit Recipe</a>
+       <a href="#">Delete Recipe</a>
+      </div>
+    </div>
+  </div>
+
+
+  <<ul class="navbar navbar-nav px-2 ">
+    <li class="nav-item dropdown  " >
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Manage
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" aria-expanded="true">
+        <a class="dropdown-item" href="#">To Shopping List</a>
+        <a class="dropdown-item" href="#">Edit Recipe</a>
+        <a class="dropdown-item" href="#">Delete Recipe</a>
+
+      </div>
+    </li>
+  </ul>
+
+
+</div>
+-->
+
+<div class="row"  >
+  <div class="col-xs-12">
+    <div class="btn-group">
+      <div class="dropdown" >
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span style="color: white">Manage</span>
+          </a>
+         <div class="dropdown-menu">
+          <a class="dropdown-item" (click)="onAddToShoppingList()" href="#">To Shopping List</a>
+          <a class="dropdown-item" href="#">Edit Recipe</a>
+          <a class="dropdown-item" href="#">Delete Recipe</a>
+        </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    Description {{Recipe.name}}  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Ingredients : {{Recipe.description}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul *ngFor="let i of Recipe.ingredient">
+      <li>{{i.name }} , {{i.amount}}</li>
+    </ul>
+  </div>
+</div>
